@@ -3,50 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>kWh Classifier</title>
+<title>Q4DRILL1</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<style>
+
+body{
+    background: linear-gradient(135deg, #ffb6d9, #8aff8a);
+    font-family: "Comic Sans MS", cursive;
+    text-align:center;
+    padding:40px;
+}
+
+.lab-box{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    max-width:450px;
+    margin:auto;
+    box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+h1{
+    color:#ff4fa3;
+    font-weight:bold;
+}
+
+.monster{
+    font-size:40px;
+}
+
+button{
+    background:#7cff7c !important;
+    border:none !important;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#59d959 !important;
+}
+
+</style>
+
 </head>
 
-<body class="p-4">
+<body>
 
-<h1>kWh Classifier</h1>
+<div class="lab-box">
 
-<input type="text" class="form-control" id="kWh" placeholder="Enter kWh usage">
+<div class="monster">🎀⚡🧪</div>
+
+<h1>Hello Kitty Monster Lab</h1>
+
+<p>Enter your electricity usage (kWh)</p>
+
+<input type="text" class="form-control" id="kWh" placeholder="Type your kWh here...">
 <br>
 
-<button class="btn btn-info" onclick="checkkWh()">Check</button>
+<button class="btn btn-success" onclick="checkkWh()">Check Consumption</button>
+
+</div>
 
 <script>
 
 function checkkWh(){
 
-    let kWh = Number(document.getElementById("kWh").value);
+let kWh = Number(document.getElementById("kWh").value);
 
-    if(isNaN(kWh) || kWh < 0){
-        alert("Please enter a valid number");
-    }
+if(isNaN(kWh) || kWh < 0){
+    alert("⚡ Monster says: enter a valid number!");
+}
 
-    else if(kWh <= 100){
-        alert("Lifeline Consumer: Discounted electricity rates");
-    }
+else if(kWh <= 100){
+    alert("🎀 Lifeline Consumer: Discounted electricity rates!");
+}
 
-    else if(kWh <= 200){
-        alert("Low Consumption: Normal residential rate");
-    }
+else if(kWh <= 200){
+    alert("🌸 Low Consumption: Normal residential rate!");
+}
 
-    else if(kWh <= 300){
-        alert("Average Consumption: Typical electricity usage");
-    }
+else if(kWh <= 300){
+    alert("🔋 Average Consumption: Typical electricity usage!");
+}
 
-    else if(kWh <= 500){
-        alert("High Consumption: Higher electricity usage");
-    }
+else if(kWh <= 500){
+    alert("⚡ High Consumption: Higher electricity usage!");
+}
 
-    else{
-        alert("Very High Consumption: Heavy electricity users");
-    }
+else{
+    alert("🧪 Very High Consumption: Heavy electricity users!");
+}
 
 }
 
